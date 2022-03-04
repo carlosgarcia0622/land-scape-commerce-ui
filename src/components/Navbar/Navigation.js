@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logo from '../../../src/shopping-cart.svg';
+import { CartWidget } from './CartWidget';
 
 const Navigation = () =>{
     return (
@@ -9,13 +9,13 @@ const Navigation = () =>{
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav>
-                        <Nav.Link href='/'>Home</Nav.Link>
-                        <Nav.Link href='/buy'>Buy</Nav.Link>
-                        <Nav.Link href='/sell'>Sell</Nav.Link>
+                        <Nav.Link href='/houses'>Houses</Nav.Link>
+                        <Nav.Link href='/lots'>Lots</Nav.Link>
+                        <Nav.Link href='/apartments'>Apartments</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <Nav.Link href='/cart'>
-                    <img src={logo} className="Cart-logo" alt="logo" /> 
+                    <CartWidget/>
                 </Nav.Link>
             </Container>
         </Navbar>
