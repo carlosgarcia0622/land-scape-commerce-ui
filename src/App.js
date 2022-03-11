@@ -1,8 +1,7 @@
 import './App.css';
-import Navigation from './components/navbar/Navigation';
+import Navigation from './components/Navbar/Navigation';
 import {  Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router} from 'react-router-dom';
-
 import Houses from './pages/Houses';
 import Lots from './pages/Lots';
 import Apartments from './pages/Apartments';
