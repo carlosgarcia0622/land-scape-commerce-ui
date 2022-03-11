@@ -6,6 +6,7 @@ import Houses from './pages/Houses';
 import Lots from './pages/Lots';
 import Apartments from './pages/Apartments';
 import { ItemListContainer } from './components/item-list-container/ItemListContainer';
+import { ItemCount } from './components/ItemCount/ItemCount';
 
 function App() {
   return (
