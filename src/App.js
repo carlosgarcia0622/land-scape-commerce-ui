@@ -6,13 +6,12 @@ import Houses from './pages/Houses';
 import Lots from './pages/Lots';
 import Apartments from './pages/Apartments';
 import { ItemListContainer } from './components/item-list-container/ItemListContainer';
-import { ItemCount } from './components/ItemCount/ItemCount';
 
 function App() {
   return (
     <Router>
         <Navigation/>
-        <ItemListContainer greeting='¡Hola! ¿Qué tal? Soy el chico de las poesías'/>
+        <ItemListContainer/>
         <Routes>
           <Route path='/houses' element={<Houses/>}/>
           <Route path='/lots' element={<Lots/>}/>

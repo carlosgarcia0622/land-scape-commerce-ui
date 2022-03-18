@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { ItemCount } from "../ItemCount/ItemCount"
 import { ItemList } from "../ItemList/ItemList";
 import "./itemListContainer.styles.css"
 export const ItemListContainer = () =>{
@@ -7,15 +6,15 @@ export const ItemListContainer = () =>{
     const products =  [
         {
           id: 0,
-          title: "Donas",
+          title: "Casa finca",
           price: 300000,
           description:
-            "Casa con jardín, doble garaje y dos pisos en excelente ubicación",
+            "Casa finca con jardín, doble garaje y dos pisos en excelente ubicación",
           pictureUrl:
         "https://image.shutterstock.com/image-photo/houses-suburb-summer-north-america-600w-1514333600.jpg"        },
         {
           id: 1,
-          title: "Macarrones franceses",
+          title: "Casa",
           price: 500000,
           description:
             "Casa  con jardín y doble garaje de un piso en unidad cerrada",
@@ -44,7 +43,7 @@ export const ItemListContainer = () =>{
     const getItems = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
-        })
+        }, 2000)
     })
 
     useEffect(() => {
@@ -52,10 +51,16 @@ export const ItemListContainer = () =>{
             setItems(result)
         })
     }, []);
+
+    const styles = {
+      margin: '0 auto',
+      maxWidth: '1200px',
+      
+  }
+  
     return(
-        <>
-             <ItemList items={items}/>
-            <ItemCount stock={5} initial={1} onAdd={(amount)=>{console.log(`Productos agregados: ${amount}`)}}></ItemCount>
-        </>
+      <div className="row" style={styles}>
+             <ItemList className="ItemList" items={items}/>
+            </div>
     )
 }
