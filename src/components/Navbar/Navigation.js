@@ -1,17 +1,21 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import logo from "../../logo.png"
 import { CartWidget } from './CartWidget';
 
 const Navigation = () =>{
     return (
-        <div>
+        <header>
         <Navbar collapseOnSelect  expand='sm' bg='dark' variant='dark'>
             <Container>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav>
-                        <Nav.Link href='/houses'>Houses</Nav.Link>
-                        <Nav.Link href='/lots'>Lots</Nav.Link>
-                        <Nav.Link href='/apartments'>Apartments</Nav.Link>
+                    <Nav.Link href="/">
+                        <img src={logo} className="Cart-logo" alt="logo"></img>
+                    </Nav.Link>
+                        <Nav.Link href='/category/houses'>Houses</Nav.Link>
+                        <Nav.Link href='/category/lots'>Lots</Nav.Link>
+                        <Nav.Link href='/category/apartments'>Apartments</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 <Nav.Link href='/cart'>
@@ -19,7 +23,7 @@ const Navigation = () =>{
                 </Nav.Link>
             </Container>
         </Navbar>
-        </div>
+        </header>
     )
 }
 export default Navigation

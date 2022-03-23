@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card-image{
+  float: left;
+  height: 600px;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.card-right{
+  float: right;
+  margin-top: 20px;
+  height: 600px;
+  width: 400px;
+  margin-right: 100px;
+}
+
+.item-title{
+  text-align: left;
+}
+.item-price{
+  text-align: left;
+  font-size: small;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.item-desc{
+  color: #888888;
+  text-align: left;
+}
+
+.btn-add{
+  background: white;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #CCCCCC;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-image{
+      float: left;
+      height: 600px;
+      width: 100%;
+      margin-top: 20px;
+      margin-right: 30px;
+      margin-left: auto;
+  }
+  .card-right{
+      float: left;
+      margin-top: 20px;
+      height: 600px;
+      width: 100%;
+  }
+
+  .card-image .card-right{
+      display: inline-block;
+  }
+
+  button::-moz-focus-inner {
+      border: 0;
+  }
+  .btn-size::-moz-focus-inner {
+      border: 0;
+  }
+}

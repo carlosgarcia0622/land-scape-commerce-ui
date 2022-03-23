@@ -1,32 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { Modal } from 'react-bootstrap';
+import { useParams } from 'react-router';
+import { getProducts } from '../../utils/getProducts';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import "./ItemDetailContainer.style.css"
 
-const ItemDetailContainer = ({show, hideDetails}) => {
+const ItemDetailContainer = ({show}) => {
     const [item, setItem] = useState({});
-    const product =         {
-        id: 0,
-        title: "Finca",
-        price: 300000,
-        description:
-          "Casa con jardín, doble garaje y dos pisos en excelente ubicación",
-        pictureUrl:
-      "https://image.shutterstock.com/image-photo/houses-suburb-summer-north-america-600w-1514333600.jpg"        
-    }
-    const getItem = new Promise((resolve, reject) =>{
-        setTimeout(() => {
-            resolve(product)
-        }, 2000)
-    })
-
+    const {id} = useParams()
     useEffect(() => {
-        getItem.then(result => {
-            setItem(result);
+        getProducts({id}).then(result => {
+          console.log(result)
+            setItem(result[0]);
         })
     }, [])
   return (
-    <ItemDetail item={item} show={show} hideDetails={hideDetails}>Detail</ItemDetail>
+    <ItemDetail item={item} show={show}>Detail</ItemDetail>
   )
 }
 

@@ -20,7 +20,7 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
             <input type="number" className="count" name="qty" value={amount}/>
             <span onClick={add} className="plus bg-dark">+</span>
         </div>
-        <button className="myButton" onClick={stock? onAdd(amount): null}>Agregar al carrito</button>
+        <button className="btn-add" onClick={stock? onAdd(amount): null}>Agregar al carrito</button>
         </>
     )
 }

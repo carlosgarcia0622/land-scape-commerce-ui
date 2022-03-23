@@ -1,21 +1,19 @@
 import './App.css';
 import Navigation from './components/Navbar/Navigation';
-import {  Routes, Route } from "react-router-dom";
+import {  Routes, Route, Navigate } from "react-router-dom";
 import { BrowserRouter as Router} from 'react-router-dom';
-import Houses from './pages/Houses';
-import Lots from './pages/Lots';
-import Apartments from './pages/Apartments';
 import { ItemListContainer } from './components/item-list-container/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
     <Router>
         <Navigation/>
-        <ItemListContainer/>
         <Routes>
-          <Route path='/houses' element={<Houses/>}/>
-          <Route path='/lots' element={<Lots/>}/>
-          <Route path='/apartments' element={<Apartments/>}/>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route path="*" element={ <Navigate to="/"/> } />
         </Routes>
       </Router>
   );
