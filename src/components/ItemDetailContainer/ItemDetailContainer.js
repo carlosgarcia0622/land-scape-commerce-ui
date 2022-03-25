@@ -14,7 +14,7 @@ const ItemDetailContainer = ({show}) => {
         })
     }, [])
   return (
-    <ItemDetail item={item} show={show}>Detail</ItemDetail>
+    <ItemDetail {...item} show={show}>Detail</ItemDetail>
   )
 }
 

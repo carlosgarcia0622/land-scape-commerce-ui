@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './ItemCount.style.css'
 
 
-export const ItemCount = ({stock, initial, onAdd}) =>{
-    const [amount, setAmount] = useState(initial);
+export const ItemCount = ({stock, amount, setAmount, handleAdd}) =>{
+    
     const add =() =>{
         if(amount < stock)setAmount(amount + 1);
     }
@@ -16,11 +16,13 @@ export const ItemCount = ({stock, initial, onAdd}) =>{
     return(
         <>
         <div className="qty mt-5">
-            <span onClick={subtrac} className="minus bg-dark">-</span>
+            <button className="btn btn-outline-secondary" onClick={subtrac} >-</button>
             <input type="number" className="count" name="qty" value={amount}/>
-            <span onClick={add} className="plus bg-dark">+</span>
+            <button className="btn btn-outline-secondary" onClick={add} >+</button>
         </div>
-        <button className="btn-add" onClick={stock? onAdd(amount): null}>Agregar al carrito</button>
+        <Link to="/cart">
+            <button className="btn-add" onClick={handleAdd}>Agregar al carrito</button>
+        </Link>
         </>
     )
 }
