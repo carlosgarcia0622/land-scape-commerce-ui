@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
 import './ItemCount.style.css'
 
 
-export const ItemCount = ({stock, amount, setAmount, handleAdd}) =>{
+export const ItemCount = ({stock=0, amount, setAmount, handleAdd}) =>{
     
     const add =() =>{
         if(amount < stock)setAmount(amount + 1);
@@ -20,9 +19,7 @@ export const ItemCount = ({stock, amount, setAmount, handleAdd}) =>{
             <input type="number" className="count" name="qty" value={amount}/>
             <button className="btn btn-outline-secondary" onClick={add} >+</button>
         </div>
-        <Link to="/cart">
-            <button className="btn-add" onClick={handleAdd}>Agregar al carrito</button>
-        </Link>
+        <button className="btn-add" onClick={handleAdd}>Agregar al carrito</button>
         </>
     )
 }

@@ -4,15 +4,18 @@ export const products =  [
       categoryId: "houses",
       title: "Casa",
       price: 300000,
+      stock: 5,
       description:
         "Casa finca con jardín, doble garaje y dos pisos en excelente ubicación",
       pictureUrl:
-    "https://image.shutterstock.com/image-photo/houses-suburb-summer-north-america-600w-1514333600.jpg"        },
+    "https://image.shutterstock.com/image-photo/houses-suburb-summer-north-america-600w-1514333600.jpg"        
+  },
     {
       id: "1",
       categoryId: "houses",
       title: "Casa",
       price: 500000,
+      stock: 5,
       description:
         "Casa  con jardín y doble garaje de un piso en unidad cerrada",
       pictureUrl:
@@ -23,6 +26,7 @@ export const products =  [
       categoryId: "houses",
       title: "Casa",
       price: 1200000,
+      stock: 5,
       description:
         "Finca con piscina, dos pisos, dos balcones, en unidad cerrada",
       pictureUrl:
@@ -33,6 +37,7 @@ export const products =  [
       categoryId: "houses",
       title: "Casa",
       price: 12000000,
+      stock: 5,
       description:
         "Finca de amplio espacio ideal para una familia numerosa",
       pictureUrl:
@@ -43,6 +48,7 @@ export const products =  [
       categoryId: "lots",
       title: "Lote",
       price: 500000,
+      stock: 5,
       description:
         "Lote de 20000 metros cuadrados ideal para ganadería y cultivo",
       pictureUrl:
@@ -53,6 +59,7 @@ export const products =  [
       categoryId: "lots",
       title: "Lote",
       price: 1200000,
+      stock: 5,
       description:
         "Lote de 10000 metros cuadrados ideal para ecoturismo",
       pictureUrl:
@@ -63,6 +70,7 @@ export const products =  [
       categoryId: "lots",
       title: "Lote",
       price: 12000000,
+      stock: 5,
       description:
         "Lote de 1000 metros cuadrados para cultivo",
       pictureUrl:
@@ -73,6 +81,7 @@ export const products =  [
       categoryId: "lots",
       title: "Lote",
       price: 12000000,
+      stock: 5,
       description:
         "Lote de 5000 metros cuadrados a las afueras de la ciudad",
       pictureUrl:

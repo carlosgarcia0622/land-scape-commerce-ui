@@ -1,4 +1,5 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from "../../logo.png"
 import { CartWidget } from './CartWidget';
 
@@ -10,15 +11,15 @@ const Navigation = () =>{
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav>
-                    <Nav.Link href="/">
+                    <Nav.Link as={Link} to="/">
                         <img src={logo} className="Cart-logo" alt="logo"></img>
                     </Nav.Link>
-                        <Nav.Link href='/category/houses'>Houses</Nav.Link>
-                        <Nav.Link href='/category/lots'>Lots</Nav.Link>
-                        <Nav.Link href='/category/apartments'>Apartments</Nav.Link>
+                        <Nav.Link as={Link} to='/category/houses'>Houses</Nav.Link>
+                        <Nav.Link as={Link} to='/category/lots'>Lots</Nav.Link>
+                        <Nav.Link as={Link} to='/category/apartments'>Apartments</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-                <Nav.Link href='/cart'>
+                <Nav.Link as={Link} to='/cart'>
                     <CartWidget/>
                 </Nav.Link>
             </Container>

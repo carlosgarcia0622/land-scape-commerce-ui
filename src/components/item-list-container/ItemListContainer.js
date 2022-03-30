@@ -10,7 +10,7 @@ export const ItemListContainer = () =>{
         getProducts({categoryId}).then(result =>{
             setItems(result)
         })
-    }, []);
+    }, [categoryId]);
 
     const styles = {
       margin: '0 auto',
