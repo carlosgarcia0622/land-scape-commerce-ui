@@ -19,6 +19,13 @@ code {
   margin-top: 20px;
 }
 
+.cart-image{
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+  display: flex;
+}
+
 .card-right{
   float: right;
   margin-top: 20px;
@@ -78,3 +85,10 @@ code {
       border: 0;
   }
 }
+
+.cart-widget{
+  color: rgb(122, 117, 117);
+  display: flex;
+  text-decoration: none;
+}
+
