@@ -6,8 +6,12 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
     const addItem = (item)=>{
-        if(!isInCart(item.id)){
+        const itemFromCart = cart.find(i => i.id ===item.id)
+        if(!itemFromCart){
             setCart([...cart, item]);
+        }else{
+            itemFromCart.amount += item.amount
+            setCart(cart)
         }
     }
 

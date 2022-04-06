@@ -27,9 +27,7 @@ const  ItemDetail = ({id, pictureUrl, title, price, description, stock}) => {
                     <div className="card-right">
                         <h5 className="item-title">{title}</h5>
                         <p className="item-price"><b>${price}.00</b></p>
-                        <p className="item-desc">{description}</p>
-                        {
-                          !isInCart(id) ?
+                        <p className="item-desc">{description}</p>                          
                           <ItemCount 
                           stock={stock} 
                           initial={1} 
@@ -37,12 +35,14 @@ const  ItemDetail = ({id, pictureUrl, title, price, description, stock}) => {
                           setAmount={setAmount}
                           handleAdd={handleAdd}
                           ></ItemCount>
-                          :
-                          <Link to="/cart"><button className="btn-add" >Terminar mi compra</button>
-                        
-                    </Link>
+                          {
+                            isInCart(id) && <Link to="/cart">
+                                <button style={{marginLeft: '10px'}} className="btn-add" >Terminar mi compra</button> 
+                              </Link>
+                          }
 
-                        }
+
+                        
                     </div>
                 </div>
   )

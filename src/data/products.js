@@ -66,7 +66,7 @@ export const products =  [
         "https://image.shutterstock.com/image-photo/rural-traditional-architecture-livestock-farms-600w-1327769552.jpg",
     },
     {
-      id: 6,
+      id: "6",
       categoryId: "lots",
       title: "Lote",
       price: 12000000,
