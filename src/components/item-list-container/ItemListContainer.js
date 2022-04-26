@@ -2,22 +2,11 @@ import { useEffect, useState } from "react"
 import { ItemList } from "../ItemList/ItemList";
 import "./itemListContainer.styles.css"
 import { useParams } from "react-router-dom";
-import { getProducts } from "../../utils/getProducts";
 import { db } from "../../firebase/config"
-import { collection, getDocs, query, where, setDoc, doc} from "firebase/firestore"
+import { collection, getDocs, query, where, } from "firebase/firestore"
 export const ItemListContainer = () =>{
     const [items, setItems] = useState([]);
     const {categoryId} = useParams()
-    useEffect(() => {
-        getProducts({categoryId}).then(result =>{
-            for(const item of result){
-                const ref = doc(db, 'items', item.id);
-                //setDoc(ref, item, { merge: true });
-            }
-        })
-        
-
-    }, [categoryId]);
 
     useEffect( ()=>{
         
