@@ -1,6 +1,6 @@
 # land-scape-commerce-ui
 
-Front-end del ecommerce land-scape realizado ustilizando react y firebase
+Front-end del ecommerce land-scape realizado utilizando react y firebase
 
 ## Guía de instalación
 
